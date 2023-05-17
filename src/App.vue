@@ -1,24 +1,17 @@
 <template>
   <v-app>
-   
     <v-main>
-      <HelloWorld/>
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-
 export default {
-  name: 'App',
-
-  components: {
-    HelloWorld,
-  },
-
-  data: () => ({
-    //
-  }),
-};
+  name: 'App'
+}
 </script>
+
+<style>
+/* İsteğe bağlı stillemeleri buraya ekleyebilirsiniz */
+</style>

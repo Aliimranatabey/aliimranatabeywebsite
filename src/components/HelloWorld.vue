@@ -149,51 +149,88 @@
     }),
   }
 </script> -->
-<template>
-  <v-parallax
+<!-- <template>
+  <v-container>
+    <v-toolbar color="primary" dark>
+      <v-toolbar-title>Ana Sayfa</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items>
+        <v-btn text to="/About">About</v-btn>
+        <v-btn text to="/Communication">Communication</v-btn>
+        <v-btn text to="/AnamenuHome">AnamenuHome</v-btn>
+        <v-btn text to="/Blogs">Blogs</v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
+    <v-main>
+      <v-parallax
       height="300"
       src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
   >
-  <v-footer
-    color="primary lighten-2"
-    padless
-  >
-    <v-row
-      justify="center"
-      no-gutters
-    >
-      <v-btn
-        v-for="link in links"
-        :key="link"
-        color="white"
-        text
-        rounded
-        class="my-2"
-      >
-        {{ link }}
-      </v-btn>
-      <v-col
-        class="primary lighten-2 py-4 text-center white--text"
-        cols="12"
-      >
-        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
-      </v-col>
-    </v-row>
-  </v-footer>
+  <h1>Merhaba!</h1>
+      <p>Hoş geldiniz!</p>
+  
 </v-parallax>
+      
+    </v-main>
+  
+</v-container>
 </template>
 
 <script>
 export default {
   data: () => ({
     links: [
-      'Home',
-      'About Us',
-      'Team',
-      'Services',
-      'Blog',
-      'Contact Us',
+      'About',
+      'Communication',
+      'AnamenuHome',
+      'Blogs',
     ],
   }),
 }
+</script> -->
+
+<template>
+  <v-container>
+    <v-toolbar color="primary" dark>
+      <v-toolbar-title>Ana Sayfa</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items>
+        <v-btn text to="/About">Hakkımda</v-btn>
+        <v-btn text to="/Communication">İletişim</v-btn>
+        <v-btn text to="/AnamenuHome">Menü</v-btn>
+        <v-btn text to="/Blogs">İçerikler</v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
+    <v-main>
+      <v-parallax
+        height="300"
+        src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
+      >
+        <v-container class="fill-height">
+          <v-row align="center" justify="center">
+            <v-col cols="12" sm="6" md="4" lg="3">
+              <v-avatar size="150">
+                <img src="path/to/your/photo.jpg" alt="Your Photo">
+              </v-avatar>
+            </v-col>
+            <v-col cols="12" sm="6" md="8" lg="9">
+              <h1>Merhaba, Benim Adım John Doe</h1>
+              <p>Buraya kendiniz hakkında bilgileri ekleyebilirsiniz.</p>
+              <p>Örneğin, tecrübeleriniz, ilgi alanlarınız veya yetenekleriniz hakkında bilgi verebilirsiniz.</p>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-parallax>
+    </v-main>
+  </v-container>
+</template>
+
+<script>
+export default {
+  name: 'HelloWorld'
+}
 </script>
+
+<style scoped>
+/* İsteğe bağlı stillemeleri buraya ekleyebilirsiniz */
+</style>
